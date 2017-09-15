@@ -10,7 +10,7 @@ REDIRS = defaultdict(lambda: 'https://www.{}'.format(SERVER_NAME), {
 
 app = Flask(__name__)
 app.config['DEBUG'] = bool(os.getenv('DEBUG'))
-app.config['SERVER_NAME'] = '{}:80'.format(SERVER_NAME)
+app.config['SERVER_NAME'] = '{}:{}'.format(os.getenv('SERVER_NAME', SERVER_NAME), os.getenv('PORT', 80))
 
 @app.route('/', subdomain="<subdomain>")
 def redir(subdomain):
