@@ -8,6 +8,7 @@ REDIRS = defaultdict(lambda: 'https://www.{}'.format(SERVER_NAME), {
   'join-eng': 'https://medium.com/@yasyf/come-hack-at-dorm-room-fund-4a38bbe8354c',
   '5years': 'https://5years.dormroomfund.com',
   'femalefounders':'https://femalefoundersdrf.squarespace.com/',
+  'apply': 'https://www.dormroomfund.com/apply'
 })
 
 app = Flask(__name__)
